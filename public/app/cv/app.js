@@ -8,8 +8,8 @@
     init: function() {
       return console.log(Date.now() + ' init application');
     },
-    profiles: ['Tablet', 'Phone'],
     launch: function() {
+      alert('application launch');
       return console.log(Date.now() + ' application launch');
     }
   });
