@@ -3,7 +3,8 @@
   Ext.define('cv.profile.Tablet', {
     extend: 'Ext.app.Profile',
     config: {
-      name: 'Tablet'
+      name: 'Tablet',
+      controllers: ['cv.controller.tablet.main', 'cv.controller.page']
     },
     isActive: function() {
       return Ext.os.is.Android;

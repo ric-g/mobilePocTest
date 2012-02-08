@@ -56,7 +56,7 @@ Ext.define('cv.view.phone.Menu'
    return menuItems
  menuTapHandler: (button, e)->
    console.log (button._text + ' ' + button.id + ' is clicked')
-   console.log (e)
+   #console.log (e)
  constructor: (config) ->
    console.log 'menu constructor'
    config.items=[

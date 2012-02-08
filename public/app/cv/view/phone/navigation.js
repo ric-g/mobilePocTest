@@ -72,8 +72,7 @@
       return menuItems;
     },
     menuTapHandler: function(button, e) {
-      console.log(button._text + ' ' + button.id + ' is clicked');
-      return console.log(e);
+      return console.log(button._text + ' ' + button.id + ' is clicked');
     },
     constructor: function(config) {
       console.log('menu constructor');

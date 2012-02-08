@@ -6,26 +6,19 @@ Ext.define('cv.controller.page'
    main: '#mainPage'
    menuItems: 'button'
   routes: 
-   'pages/index/:id': 'showPage'
+   'pages/index/:id': 'changePage'
   control:
    menuItems:
-    tap: "changePage"
- changePage: (options)->
+    tap: "redirectPage"
+ redirectPage: (options)->
   console.log options
-  console.log 'Page Controller changePage'
-  if options.id is 'menu-M'
+  console.log 'Page Controller redirectPage'
+  @redirectTo('pages/index/' + options.id)
+ changePage: (id)->
+  if id is 'menu-M'
    @getMain().setItems([Ext.create('cv.view.page.M')]);
-  else if options.id is 'menu-N'
+  else if id is 'menu-N'
    @getMain().setItems([Ext.create('cv.view.page.N')]);
-  ###
-  pageStr = "It's " + options._text + " page."
-  @getMain().setItems([
-   {xtype: 'panel',html: pageStr + "1",flex: 2}
-   {xtype: 'panel',html: pageStr + "2",flex: 1}
-  ])
-  ###
- showPage:(id)->
-  console.log 'show page ' + id
  init: ->
   console.log 'Page Controller init'
 )

@@ -4,7 +4,7 @@
     extend: 'Ext.app.Profile',
     config: {
       name: 'Phone',
-      controllers: ['cv.controller.page']
+      controllers: ['cv.controller.phone.main', 'cv.controller.page']
     },
     isActive: function() {
       return Ext.os.is.Desktop;

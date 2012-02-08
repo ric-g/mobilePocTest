@@ -10,7 +10,7 @@
     },
     profiles: ['Tablet', 'Phone'],
     launch: function() {
-      return console.log(Date.now() + ' launch');
+      return console.log(Date.now() + ' application launch');
     }
   });
 

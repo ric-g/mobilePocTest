@@ -9,32 +9,25 @@
         menuItems: 'button'
       },
       routes: {
-        'pages/index/:id': 'showPage'
+        'pages/index/:id': 'changePage'
       },
       control: {
         menuItems: {
-          tap: "changePage"
+          tap: "redirectPage"
         }
       }
     },
-    changePage: function(options) {
+    redirectPage: function(options) {
       console.log(options);
-      console.log('Page Controller changePage');
-      if (options.id === 'menu-M') {
+      console.log('Page Controller redirectPage');
+      return this.redirectTo('pages/index/' + options.id);
+    },
+    changePage: function(id) {
+      if (id === 'menu-M') {
         return this.getMain().setItems([Ext.create('cv.view.page.M')]);
-      } else if (options.id === 'menu-N') {
+      } else if (id === 'menu-N') {
         return this.getMain().setItems([Ext.create('cv.view.page.N')]);
       }
-      /*
-        pageStr = "It's " + options._text + " page."
-        @getMain().setItems([
-         {xtype: 'panel',html: pageStr + "1",flex: 2}
-         {xtype: 'panel',html: pageStr + "2",flex: 1}
-        ])
-      */
-    },
-    showPage: function(id) {
-      return console.log('show page ' + id);
     },
     init: function() {
       return console.log('Page Controller init');
