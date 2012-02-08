@@ -19,6 +19,7 @@ Ext.define('cv.view.tablet.navigation'
    title: 'CitiVelocity'
    items: [
      {xtype: 'cvTabletMenu'}
+     {xtype: 'cvMainPage'}
    ]
   ]
 )
@@ -65,6 +66,6 @@ Ext.define('cv.view.tablet.Menu'
     items: @getMenuItems()
    ])
    #@superclass.constructor.apply(this,arguments)
-   #@callParent.apply(this,arguments)
+   @callParent()
 
 )

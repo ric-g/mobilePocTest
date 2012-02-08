@@ -25,6 +25,8 @@
           items: [
             {
               xtype: 'cvTabletMenu'
+            }, {
+              xtype: 'cvMainPage'
             }
           ]
         }
@@ -74,7 +76,7 @@
     },
     initialize: function() {
       console.log('menu initialize');
-      return this.setItems([
+      this.setItems([
         {
           id: 'menuBarButtons',
           itemId: 'menuBarButtons',
@@ -83,6 +85,7 @@
           items: this.getMenuItems()
         }
       ]);
+      return this.callParent();
     }
   });
 

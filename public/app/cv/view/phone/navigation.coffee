@@ -67,6 +67,6 @@ Ext.define('cv.view.phone.Menu'
     items: @getMenuItems()
    ])
    #@superclass.constructor.apply(this,arguments)
-   #@callParent.apply(this,arguments)
+   @callParent()
 
 )
