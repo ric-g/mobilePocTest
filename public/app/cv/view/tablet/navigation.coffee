@@ -65,7 +65,7 @@ Ext.define('cv.view.tablet.Menu'
    )
    ###
  constructor: (config) ->
-   console.log 'menu constructor'
+   alert 'menu constructor'
    config.items=[
     id: 'menuBarButtons'
     itemId: 'menuBarButtons'

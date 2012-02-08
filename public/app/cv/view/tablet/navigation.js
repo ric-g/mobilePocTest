@@ -83,7 +83,7 @@
       */
     },
     constructor: function(config) {
-      console.log('menu constructor');
+      alert('menu constructor');
       config.items = [
         {
           id: 'menuBarButtons',

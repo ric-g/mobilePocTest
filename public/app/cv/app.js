@@ -10,8 +10,7 @@
     },
     profiles: ['Tablet', 'Phone'],
     launch: function() {
-      alert('application launch');
-      alert(Ext.os.deviceType);
+      alert('application launch' + Ext.os.deviceType);
       return console.log(Date.now() + ' application launch');
     }
   });
