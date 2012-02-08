@@ -13,6 +13,7 @@
       return Ext.Viewport.on('orientationchange', this.onOrientationChange);
     },
     onOrientationChange: function(viewport, orientation, width, height) {
+      alert('Orientation Change');
       return console.log('Orientation Change');
     }
   });
