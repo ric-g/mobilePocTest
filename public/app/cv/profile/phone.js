@@ -7,7 +7,7 @@
       controllers: ['cv.controller.phone.main', 'cv.controller.page']
     },
     isActive: function() {
-      return Ext.os.is.Desktop;
+      return Ext.os.is.Desktop || Ext.os.is.Phone;
     },
     launch: function() {
       console.log(Date.now() + ' cv.profile.Phone launch');

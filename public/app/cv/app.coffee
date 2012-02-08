@@ -7,10 +7,8 @@ Ext.application
      console.log Date.now()+' init application'
     profiles: ['Tablet', 'Phone']
     launch: ->
-     alert 'application launch' + Ext.os.deviceType
-     console.log Date.now()+' application launch'
+     console.log Date.now()+' application launch ' +Ext.os.deviceType
 
 doOnReady = (fn,scope,options) ->
- alert "onready"
  console.log Date.now()+' onready'
 Ext.onReady(doOnReady)

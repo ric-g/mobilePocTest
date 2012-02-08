@@ -15,10 +15,12 @@ Ext.define('cv.controller.page'
   console.log 'Page Controller redirectPage'
   @redirectTo('pages/index/' + options.id)
  changePage: (id)->
-  if id is 'menu-M'
-   @getMain().setItems([Ext.create('cv.view.page.M')]);
-  else if id is 'menu-N'
-   @getMain().setItems([Ext.create('cv.view.page.N')]);
+  if id is 'menu-MarketBuzz'
+   @getMain().setItems([Ext.create('cv.view.page.marketBuzz')])
+  else if id is 'menu-Research'
+   @getMain().setItems([Ext.create('cv.view.page.research')])
+  else if id is 'menu-FX'
+   @getMain().setItems([{xtype:'panel',html:"It's FX page."}])
  init: ->
   console.log 'Page Controller init'
 )

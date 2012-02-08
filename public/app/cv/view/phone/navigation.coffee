@@ -47,7 +47,7 @@ Ext.define('cv.view.phone.Menu'
   ###
  getMenuItems: ->
    console.log 'getMenuItems'
-   menus = ['M','N']
+   menus = ['MarketBuzz', 'Research']
    menuItems = []
    menus.forEach (page, i)=>
     newId = 'menu-'+page
@@ -57,15 +57,16 @@ Ext.define('cv.view.phone.Menu'
  menuTapHandler: (button, e)->
    console.log (button._text + ' ' + button.id + ' is clicked')
    #console.log (e)
- constructor: (config) ->
-   console.log 'menu constructor'
-   config.items=[
+ initialize: () ->
+   console.log 'menu initialize'
+   @setItems([
     id: 'menuBarButtons'
     itemId: 'menuBarButtons'
     xtype: 'segmentedbutton'
     allowMultiple: false
     items: @getMenuItems()
-   ]
-   @superclass.constructor.apply(this,arguments)
+   ])
+   #@superclass.constructor.apply(this,arguments)
+   #@callParent.apply(this,arguments)
 
 )

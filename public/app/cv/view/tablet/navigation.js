@@ -24,7 +24,6 @@
           title: 'CitiVelocity',
           items: [
             {
-              dock: 'bottom',
               xtype: 'cvTabletMenu'
             }
           ]
@@ -74,20 +73,19 @@
       return menuItems;
     },
     menuTapHandler: function(button, e) {
-      return alert(button._text + ' ' + button.id + ' is clicked');
+      return console.log(button._text + ' ' + button.id + ' is clicked');
     },
-    constructor: function(config) {
-      alert('menu constructor');
-      /*
-         config.items=[
-          id: 'menuBarButtons'
-          itemId: 'menuBarButtons'
-          xtype: 'segmentedbutton'
-          allowMultiple: false
-          items: @getMenuItems()
-         ]
-      */
-      return this.callParent.apply(this, arguments);
+    initialize: function() {
+      console.log('menu initialize');
+      return this.setItems([
+        {
+          id: 'menuBarButtons',
+          itemId: 'menuBarButtons',
+          xtype: 'segmentedbutton',
+          allowMultiple: false,
+          items: this.getMenuItems()
+        }
+      ]);
     }
   });
 

@@ -1,9 +1,9 @@
 (function() {
 
-  Ext.define('cv.view.page.M', {
+  Ext.define('cv.view.page.marketBuzz', {
     extend: 'Ext.Panel',
     config: {
-      id: 'cvMpage',
+      id: 'cvMarketBuzzpage',
       width: "100%",
       style: "background-color:#ffffff",
       layout: {
@@ -12,12 +12,12 @@
       items: [
         {
           xtype: 'panel',
-          html: "It's M portal 1",
+          html: "It's marketBuzz portal 1",
           flex: 2,
           style: "background-color:#eeddee"
         }, {
           xtype: 'panel',
-          html: "It's M portal 2",
+          html: "It's marketBuzz portal 2",
           flex: 1,
           style: "background-color:#adceef"
         }
@@ -25,7 +25,7 @@
     },
     initialize: function() {
       this.callParent.apply(this, arguments);
-      return console.log('page M initialize');
+      return console.log('page marketBuzz initialize');
     }
   });
 

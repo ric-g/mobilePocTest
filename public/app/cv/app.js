@@ -10,13 +10,11 @@
     },
     profiles: ['Tablet', 'Phone'],
     launch: function() {
-      alert('application launch' + Ext.os.deviceType);
-      return console.log(Date.now() + ' application launch');
+      return console.log(Date.now() + ' application launch ' + Ext.os.deviceType);
     }
   });
 
   doOnReady = function(fn, scope, options) {
-    alert("onready");
     return console.log(Date.now() + ' onready');
   };
 

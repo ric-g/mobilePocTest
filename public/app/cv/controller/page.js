@@ -23,10 +23,17 @@
       return this.redirectTo('pages/index/' + options.id);
     },
     changePage: function(id) {
-      if (id === 'menu-M') {
-        return this.getMain().setItems([Ext.create('cv.view.page.M')]);
-      } else if (id === 'menu-N') {
-        return this.getMain().setItems([Ext.create('cv.view.page.N')]);
+      if (id === 'menu-MarketBuzz') {
+        return this.getMain().setItems([Ext.create('cv.view.page.marketBuzz')]);
+      } else if (id === 'menu-Research') {
+        return this.getMain().setItems([Ext.create('cv.view.page.research')]);
+      } else if (id === 'menu-FX') {
+        return this.getMain().setItems([
+          {
+            xtype: 'panel',
+            html: "It's FX page."
+          }
+        ]);
       }
     },
     init: function() {

@@ -18,7 +18,7 @@ Ext.define('cv.view.tablet.navigation'
   items: [
    title: 'CitiVelocity'
    items: [
-     {dock: 'bottom', xtype: 'cvTabletMenu'}
+     {xtype: 'cvTabletMenu'}
    ]
   ]
 )
@@ -52,19 +52,17 @@ Ext.define('cv.view.tablet.Menu'
     menuItems[0]['pressed'] = true
    return menuItems
  menuTapHandler: (button, e)->
-   alert (button._text + ' ' + button.id + ' is clicked')
- constructor: (config) ->
-   alert 'menu constructor'
-   ###
-   config.items=[
+   console.log (button._text + ' ' + button.id + ' is clicked')
+ initialize: () ->
+   console.log 'menu initialize'
+   @setItems([
     id: 'menuBarButtons'
     itemId: 'menuBarButtons'
     xtype: 'segmentedbutton'
     allowMultiple: false
     items: @getMenuItems()
-   ]
-   ###
+   ])
    #@superclass.constructor.apply(this,arguments)
-   @callParent.apply(this,arguments)
+   #@callParent.apply(this,arguments)
 
 )

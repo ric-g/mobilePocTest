@@ -1,9 +1,9 @@
 (function() {
 
-  Ext.define('cv.view.page.N', {
+  Ext.define('cv.view.page.research', {
     extend: 'Ext.Panel',
     config: {
-      id: 'cvNpage',
+      id: 'cvResearchpage',
       width: "100%",
       style: "background-color:#ffffff",
       layout: {
@@ -19,12 +19,12 @@
           items: [
             {
               xtype: 'panel',
-              html: "It's N portal 1",
+              html: "It's research portal 1",
               flex: 1,
               style: "background-color:#eeddee"
             }, {
               xtype: 'panel',
-              html: "It's N portal 2",
+              html: "It's research portal 2",
               flex: 1,
               style: "background-color:#acdeef"
             }
@@ -32,12 +32,12 @@
           style: "background-color:#000000"
         }, {
           xtype: 'panel',
-          html: "It's N portal 3",
+          html: "It's research portal 3",
           flex: 1,
           style: "background-color:#ddaee"
         }, {
           xtype: 'panel',
-          html: "It's N portal 4",
+          html: "It's research portal 4",
           flex: 1,
           style: "background-color:#efddff"
         }
@@ -45,7 +45,7 @@
     },
     initialize: function() {
       this.callParent.apply(this, arguments);
-      return console.log('page N initialize');
+      return console.log('page research initialize');
     }
   });
 

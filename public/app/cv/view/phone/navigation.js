@@ -57,7 +57,7 @@
       var menuItems, menus,
         _this = this;
       console.log('getMenuItems');
-      menus = ['M', 'N'];
+      menus = ['MarketBuzz', 'Research'];
       menuItems = [];
       menus.forEach(function(page, i) {
         var newId;
@@ -74,9 +74,9 @@
     menuTapHandler: function(button, e) {
       return console.log(button._text + ' ' + button.id + ' is clicked');
     },
-    constructor: function(config) {
-      console.log('menu constructor');
-      config.items = [
+    initialize: function() {
+      console.log('menu initialize');
+      return this.setItems([
         {
           id: 'menuBarButtons',
           itemId: 'menuBarButtons',
@@ -84,8 +84,7 @@
           allowMultiple: false,
           items: this.getMenuItems()
         }
-      ];
-      return this.superclass.constructor.apply(this, arguments);
+      ]);
     }
   });
 
