@@ -4,7 +4,7 @@ Ext.define('cv.viewport.phone.main'
       fullscreen: true
       layout: 'card'
       items: [
-       {xtype: 'cvNavigation'}
+       {xtype: 'cvPhoneNavigation'}
       ]
     constructor: (config)->
       console.log Date.now() + ' cv.viewport.phone.main constructor'

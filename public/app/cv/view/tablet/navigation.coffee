@@ -1,6 +1,6 @@
-Ext.define('cv.navigation'
+Ext.define('cv.view.tablet.navigation'
  extend: 'Ext.navigation.View'
- xtype: 'cvNavigation'
+ xtype: 'cvTabletNavigation'
  config:
   id: 'cvNavigationID'
   navigationBar:
@@ -18,21 +18,21 @@ Ext.define('cv.navigation'
   items: [
    title: 'CitiVelocity'
    items: [
-     {dock: 'bottom', xtype: 'cvMenu'}
+     {dock: 'bottom', xtype: 'cvTabletMenu'}
    ]
   ]
 )
 
 
-Ext.define('cv.Menu'
+Ext.define('cv.view.tablet.Menu'
  extend: 'Ext.Toolbar'
- xtype: 'cvMenu'
+ xtype: 'cvTabletMenu'
  config:
   id: 'cvMenu'
   #layout: 'fix'
   scroll: 'horizontal'
   cls: 'testbutton'
-  height: 40
+  #height: 40
   ###
   items: [
     id: 'menuBarButtons'
@@ -46,14 +46,14 @@ Ext.define('cv.Menu'
   ###
  getMenuItems: ->
    console.log 'getMenuItems'
-   menus = ['M','N']
+   menus = ['MarketBuzz','Research','FX']
    menuItems = []
    menus.forEach (page, i)=>
     newId = 'menu-'+page
     menuItems.push({id: newId, text: page, handler: @menuTapHandler})
     menuItems[0]['pressed'] = true
    return menuItems
-  menuTapHandler: (button, e)->
+ menuTapHandler: (button, e)->
    console.log (button._text + ' ' + button.id + ' is clicked')
    console.log (e)
    ###
@@ -64,7 +64,7 @@ Ext.define('cv.Menu'
     historyUrl: 'page/index/'+button.id
    )
    ###
-  constructor: (config) ->
+ constructor: (config) ->
    console.log 'menu constructor'
    config.items=[
     id: 'menuBarButtons'
@@ -73,6 +73,7 @@ Ext.define('cv.Menu'
     allowMultiple: false
     items: @getMenuItems()
    ]
-   @superclass.constructor.apply(this,arguments)
+   #@superclass.constructor.apply(this,arguments)
+   @callParent.apply(this,arguments)
 
 )

@@ -1,4 +1,4 @@
-Ext.ns('cv','cv.views','cv.controllers','cv.profile')
+Ext.ns('cv','cv.view','cv.controllers','cv.profile')
 
 Ext.application
     name: 'cv'

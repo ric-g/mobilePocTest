@@ -1,8 +1,8 @@
 (function() {
 
-  Ext.define('cv.navigation', {
+  Ext.define('cv.view.phone.navigation', {
     extend: 'Ext.navigation.View',
-    xtype: 'cvNavigation',
+    xtype: 'cvPhoneNavigation',
     config: {
       id: 'cvNavigationID',
       navigationBar: {
@@ -24,8 +24,9 @@
           title: 'CitiVelocity',
           items: [
             {
-              dock: 'bottom',
-              xtype: 'cvMenu'
+              xtype: 'cvPhoneMenu'
+            }, {
+              xtype: 'cvMainPage'
             }
           ]
         }
@@ -33,14 +34,13 @@
     }
   });
 
-  Ext.define('cv.Menu', {
+  Ext.define('cv.view.phone.Menu', {
     extend: 'Ext.Toolbar',
-    xtype: 'cvMenu',
+    xtype: 'cvPhoneMenu',
     config: {
       id: 'cvMenu',
       scroll: 'horizontal',
-      cls: 'testbutton',
-      height: 40
+      cls: 'testbutton'
       /*
         items: [
           id: 'menuBarButtons'
@@ -74,14 +74,6 @@
     menuTapHandler: function(button, e) {
       console.log(button._text + ' ' + button.id + ' is clicked');
       return console.log(e);
-      /*
-         Ext.dispatch(
-          controller: 'page'
-          action: 'index'
-          id: button.id
-          historyUrl: 'page/index/'+button.id
-         )
-      */
     },
     constructor: function(config) {
       console.log('menu constructor');

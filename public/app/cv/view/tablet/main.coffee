@@ -4,7 +4,7 @@ Ext.define('cv.viewport.tablet.main'
       fullscreen: true
       layout: 'card'
       items: [
-        {xtype: 'cvNavigation'}
+        {xtype: 'cvTabletNavigation'}
       ]
     constructor: (config)->
       console.log Date.now() + ' cv.viewport.tablet.main constructor'

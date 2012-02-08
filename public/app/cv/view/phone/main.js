@@ -7,7 +7,7 @@
       layout: 'card',
       items: [
         {
-          xtype: 'cvNavigation'
+          xtype: 'cvPhoneNavigation'
         }
       ]
     },

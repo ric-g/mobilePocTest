@@ -3,7 +3,8 @@
   Ext.define('cv.profile.Phone', {
     extend: 'Ext.app.Profile',
     config: {
-      name: 'Phone'
+      name: 'Phone',
+      controllers: ['cv.controller.page']
     },
     isActive: function() {
       return Ext.os.is.Desktop;

@@ -2,6 +2,7 @@ Ext.define('cv.profile.Phone'
     extend: 'Ext.app.Profile'
     config: 
       name: 'Phone'
+      controllers: ['cv.controller.page']
     isActive: ->
       return Ext.os.is.Desktop;
     launch: ->
