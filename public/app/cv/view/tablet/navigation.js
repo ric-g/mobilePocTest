@@ -38,21 +38,18 @@
     config: {
       id: 'cvMenu',
       scroll: 'horizontal',
-      cls: 'testbutton',
-      items: [
-        {
-          id: 'menuBarButtons',
-          itemId: 'menuBarButtons',
-          xtype: 'segmentedbutton',
+      cls: 'testbutton'
+      /*
+        items: [
+          id: 'menuBarButtons'
+          itemId: 'menuBarButtons'
+          xtype: 'segmentedbutton'
           items: [
-            {
-              text: 'text1'
-            }, {
-              text: 'text2'
-            }
+           {text: 'text1'}
+           {text: 'text2'}
           ]
-        }
-      ]
+        ]
+      */
     },
     getMenuItems: function() {
       var menuItems, menus,

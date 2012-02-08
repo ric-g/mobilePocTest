@@ -33,6 +33,7 @@ Ext.define('cv.view.tablet.Menu'
   scroll: 'horizontal'
   cls: 'testbutton'
   #height: 40
+  ###
   items: [
     id: 'menuBarButtons'
     itemId: 'menuBarButtons'
@@ -42,6 +43,7 @@ Ext.define('cv.view.tablet.Menu'
      {text: 'text2'}
     ]
   ]
+  ###
  getMenuItems: ->
    console.log 'getMenuItems'
    menus = ['MarketBuzz','Research','FX']
@@ -53,7 +55,7 @@ Ext.define('cv.view.tablet.Menu'
    return menuItems
  menuTapHandler: (button, e)->
    console.log (button._text + ' ' + button.id + ' is clicked')
- initialize: () ->
+ initialize: ()->
    console.log 'menu initialize'
    @setItems([
     id: 'menuBarButtons'

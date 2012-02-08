@@ -7,7 +7,7 @@ Ext.define('cv.viewport.tablet.main'
         {xtype: 'cvTabletNavigation'}
       ]
     constructor: (config)->
-      alert Date.now() + ' cv.viewport.tablet.main constructor'
+      console.log Date.now() + ' cv.viewport.tablet.main constructor'
       @superclass.constructor.apply(this, arguments);
     
 );

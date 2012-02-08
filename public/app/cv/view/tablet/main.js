@@ -12,7 +12,7 @@
       ]
     },
     constructor: function(config) {
-      alert(Date.now() + ' cv.viewport.tablet.main constructor');
+      console.log(Date.now() + ' cv.viewport.tablet.main constructor');
       return this.superclass.constructor.apply(this, arguments);
     }
   });
