@@ -33,7 +33,6 @@ Ext.define('cv.view.tablet.Menu'
   scroll: 'horizontal'
   cls: 'testbutton'
   #height: 40
-  ###
   items: [
     id: 'menuBarButtons'
     itemId: 'menuBarButtons'
@@ -43,7 +42,6 @@ Ext.define('cv.view.tablet.Menu'
      {text: 'text2'}
     ]
   ]
-  ###
  getMenuItems: ->
    console.log 'getMenuItems'
    menus = ['MarketBuzz','Research','FX']
@@ -54,18 +52,10 @@ Ext.define('cv.view.tablet.Menu'
     menuItems[0]['pressed'] = true
    return menuItems
  menuTapHandler: (button, e)->
-   console.log (button._text + ' ' + button.id + ' is clicked')
-   console.log (e)
-   ###
-   Ext.dispatch(
-    controller: 'page'
-    action: 'index'
-    id: button.id
-    historyUrl: 'page/index/'+button.id
-   )
-   ###
+   alert (button._text + ' ' + button.id + ' is clicked')
  constructor: (config) ->
    alert 'menu constructor'
+   ###
    config.items=[
     id: 'menuBarButtons'
     itemId: 'menuBarButtons'
@@ -73,6 +63,7 @@ Ext.define('cv.view.tablet.Menu'
     allowMultiple: false
     items: @getMenuItems()
    ]
+   ###
    #@superclass.constructor.apply(this,arguments)
    @callParent.apply(this,arguments)
 

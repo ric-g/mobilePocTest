@@ -39,18 +39,21 @@
     config: {
       id: 'cvMenu',
       scroll: 'horizontal',
-      cls: 'testbutton'
-      /*
-        items: [
-          id: 'menuBarButtons'
-          itemId: 'menuBarButtons'
-          xtype: 'segmentedbutton'
+      cls: 'testbutton',
+      items: [
+        {
+          id: 'menuBarButtons',
+          itemId: 'menuBarButtons',
+          xtype: 'segmentedbutton',
           items: [
-           {text: 'text1'}
-           {text: 'text2'}
+            {
+              text: 'text1'
+            }, {
+              text: 'text2'
+            }
           ]
-        ]
-      */
+        }
+      ]
     },
     getMenuItems: function() {
       var menuItems, menus,
@@ -71,28 +74,19 @@
       return menuItems;
     },
     menuTapHandler: function(button, e) {
-      console.log(button._text + ' ' + button.id + ' is clicked');
-      return console.log(e);
-      /*
-         Ext.dispatch(
-          controller: 'page'
-          action: 'index'
-          id: button.id
-          historyUrl: 'page/index/'+button.id
-         )
-      */
+      return alert(button._text + ' ' + button.id + ' is clicked');
     },
     constructor: function(config) {
       alert('menu constructor');
-      config.items = [
-        {
-          id: 'menuBarButtons',
-          itemId: 'menuBarButtons',
-          xtype: 'segmentedbutton',
-          allowMultiple: false,
-          items: this.getMenuItems()
-        }
-      ];
+      /*
+         config.items=[
+          id: 'menuBarButtons'
+          itemId: 'menuBarButtons'
+          xtype: 'segmentedbutton'
+          allowMultiple: false
+          items: @getMenuItems()
+         ]
+      */
       return this.callParent.apply(this, arguments);
     }
   });
