@@ -15,6 +15,7 @@
   });
 
   doOnReady = function(fn, scope, options) {
+    alert("onready");
     return console.log(Date.now() + ' onready');
   };
 

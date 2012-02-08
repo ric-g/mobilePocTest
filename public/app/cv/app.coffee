@@ -10,5 +10,6 @@ Ext.application
         console.log Date.now()+' application launch'
 
 doOnReady = (fn,scope,options) ->
+ alert "onready"
  console.log Date.now()+' onready'
 Ext.onReady(doOnReady)
