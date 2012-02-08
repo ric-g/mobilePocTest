@@ -8,8 +8,10 @@
     init: function() {
       return console.log(Date.now() + ' init application');
     },
+    profiles: ['Tablet', 'Phone'],
     launch: function() {
       alert('application launch');
+      alert(Ext.os.deviceType);
       return console.log(Date.now() + ' application launch');
     }
   });

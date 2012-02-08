@@ -7,6 +7,7 @@
       controllers: ['cv.controller.tablet.main', 'cv.controller.page']
     },
     isActive: function() {
+      alert(Ext.os.is.Tablet);
       return Ext.os.is.Tablet;
     },
     launch: function() {

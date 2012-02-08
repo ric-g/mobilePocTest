@@ -5,9 +5,10 @@ Ext.application
     #defaultTarget: 'viewport'
     init: ->
      console.log Date.now()+' init application'
-   # profiles: ['Tablet', 'Phone']
+    profiles: ['Tablet', 'Phone']
     launch: ->
      alert 'application launch'
+     alert Ext.os.deviceType
      console.log Date.now()+' application launch'
 
 doOnReady = (fn,scope,options) ->
