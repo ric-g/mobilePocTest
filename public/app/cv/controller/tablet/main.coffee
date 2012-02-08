@@ -9,4 +9,5 @@ Ext.define('cv.controller.tablet.main'
   Ext.Viewport.on('orientationchange',@onOrientationChange)
  onOrientationChange: (viewport, orientation, width, height)->
   console.log 'Orientation Change'
+  alert 'Orientation Change'
 )
