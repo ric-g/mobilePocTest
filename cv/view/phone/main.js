@@ -1,6 +1,6 @@
 (function() {
 
-  Ext.define('cv.view.phone.main', {
+  Ext.define('Cv.view.phone.Main', {
     extend: 'Ext.Panel',
     config: {
       fullscreen: true,
@@ -15,9 +15,9 @@
       direction: 'vertical',
       directionLock: true
     },
-    constructor: function(config) {
-      console.log(Date.now() + ' cv.view.phone.main constructor');
-      return this.superclass.constructor.apply(this, arguments);
+    initialize: function() {
+      console.log(Date.now() + ' Cv.view.phone.Main initialize');
+      return this.callParent();
     }
   });
 

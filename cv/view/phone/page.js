@@ -1,6 +1,6 @@
 (function() {
 
-  Ext.define('cv.view.phone.page', {
+  Ext.define('Cv.view.phone.Page', {
     extend: 'Ext.Panel',
     xtype: 'cvPhoneMainPage',
     config: {
@@ -24,7 +24,8 @@
       ]
     },
     initialize: function() {
-      return console.log('page initialize');
+      console.log('page initialize');
+      return this.callParent();
     }
   });
 

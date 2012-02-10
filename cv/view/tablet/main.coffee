@@ -1,4 +1,4 @@
-Ext.define('cv.view.tablet.main'
+Ext.define('Cv.view.tablet.Main'
     extend: 'Ext.Panel'
     config: 
       fullscreen: true
@@ -6,8 +6,11 @@ Ext.define('cv.view.tablet.main'
       items: [
         {xtype: 'cvTabletNavigation'}
       ]
-    constructor: (config)->
-      console.log Date.now() + ' cv.view.tablet.main constructor'
-      @superclass.constructor.apply(this, arguments);
+      scrollable: 
+        direction: 'vertical',
+        directionLock: true
+    initialize: ()->
+      console.log Date.now() + ' Cv.view.tablet.Main initialize'
+      @callParent()
     
 );

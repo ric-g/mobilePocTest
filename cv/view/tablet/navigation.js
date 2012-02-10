@@ -1,6 +1,6 @@
 (function() {
 
-  Ext.define('cv.view.tablet.navigation', {
+  Ext.define('Cv.view.tablet.Navigation', {
     extend: 'Ext.navigation.View',
     xtype: 'cvTabletNavigation',
     config: {
@@ -13,6 +13,7 @@
             layout: 'fit',
             text: 'back',
             ui: 'back',
+            id: 'navBackBtn',
             handler: function() {
               return console.log('back button');
             }
@@ -34,7 +35,7 @@
     }
   });
 
-  Ext.define('cv.view.tablet.Menu', {
+  Ext.define('Cv.view.tablet.Menu', {
     extend: 'Ext.Toolbar',
     xtype: 'cvTabletMenu',
     config: {
@@ -62,12 +63,11 @@
       menus.forEach(function(page, i) {
         var newId;
         newId = 'menu-' + page;
-        menuItems.push({
+        return menuItems.push({
           id: newId,
           text: page,
           handler: _this.menuTapHandler
         });
-        return menuItems[0]['pressed'] = true;
       });
       return menuItems;
     },

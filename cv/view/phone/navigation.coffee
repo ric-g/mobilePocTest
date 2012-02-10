@@ -1,4 +1,4 @@
-Ext.define('cv.view.phone.navigation'
+Ext.define('Cv.view.phone.Navigation'
  extend: 'Ext.navigation.View'
  xtype: 'cvPhoneNavigation'
  config:
@@ -25,7 +25,7 @@ Ext.define('cv.view.phone.navigation'
 )
 
 
-Ext.define('cv.view.phone.Menu'
+Ext.define('Cv.view.phone.Menu'
  extend: 'Ext.Toolbar'
  xtype: 'cvPhoneMenu'
  config:

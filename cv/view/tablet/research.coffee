@@ -1,7 +1,7 @@
-Ext.define('cv.view.tablet.research'
+Ext.define('Cv.view.tablet.Research'
  extend: 'Ext.Panel'
  config:
-  id: 'cvResearchpage'
+  id: 'cvResearchPage'
   width: "100%"
   style: "background-color:#ffffff"
   layout: 

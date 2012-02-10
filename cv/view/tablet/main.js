@@ -1,6 +1,6 @@
 (function() {
 
-  Ext.define('cv.view.tablet.main', {
+  Ext.define('Cv.view.tablet.Main', {
     extend: 'Ext.Panel',
     config: {
       fullscreen: true,
@@ -9,11 +9,15 @@
         {
           xtype: 'cvTabletNavigation'
         }
-      ]
+      ],
+      scrollable: {
+        direction: 'vertical',
+        directionLock: true
+      }
     },
-    constructor: function(config) {
-      console.log(Date.now() + ' cv.view.tablet.main constructor');
-      return this.superclass.constructor.apply(this, arguments);
+    initialize: function() {
+      console.log(Date.now() + ' Cv.view.tablet.Main initialize');
+      return this.callParent();
     }
   });
 

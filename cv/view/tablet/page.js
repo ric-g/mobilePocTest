@@ -1,6 +1,6 @@
 (function() {
 
-  Ext.define('cv.view.tablet.page', {
+  Ext.define('Cv.view.tablet.Page', {
     extend: 'Ext.Panel',
     xtype: 'cvTabletMainPage',
     config: {
@@ -9,6 +9,10 @@
       style: "background-color:#ffee00",
       layout: {
         type: 'hbox'
+      },
+      scrollable: {
+        direction: 'vertical',
+        directionLock: true
       },
       id: 'tabletMainPage',
       items: [
@@ -20,7 +24,8 @@
       ]
     },
     initialize: function() {
-      return console.log('tablet page initialize');
+      console.log('tablet page initialize');
+      return this.callParent();
     }
   });
 

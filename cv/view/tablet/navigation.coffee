@@ -1,4 +1,4 @@
-Ext.define('cv.view.tablet.navigation'
+Ext.define('Cv.view.tablet.Navigation'
  extend: 'Ext.navigation.View'
  xtype: 'cvTabletNavigation'
  config:
@@ -11,6 +11,7 @@ Ext.define('cv.view.tablet.navigation'
      layout: 'fit'
      text: 'back'
      ui: 'back'
+     id: 'navBackBtn'
      handler: ->
       console.log 'back button'
      }
@@ -25,7 +26,7 @@ Ext.define('cv.view.tablet.navigation'
 )
 
 
-Ext.define('cv.view.tablet.Menu'
+Ext.define('Cv.view.tablet.Menu'
  extend: 'Ext.Toolbar'
  xtype: 'cvTabletMenu'
  config:
@@ -52,7 +53,7 @@ Ext.define('cv.view.tablet.Menu'
    menus.forEach (page, i)=>
     newId = 'menu-'+page
     menuItems.push({id: newId, text: page, handler: @menuTapHandler})
-    menuItems[0]['pressed'] = true
+    #menuItems[0]['pressed'] = true
    return menuItems
  menuTapHandler: (button, e)->
    console.log (button._text + ' ' + button.id + ' is clicked')

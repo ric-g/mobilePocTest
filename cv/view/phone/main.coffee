@@ -1,4 +1,4 @@
-Ext.define('cv.view.phone.main'
+Ext.define('Cv.view.phone.Main'
     extend: 'Ext.Panel'
     config: 
       fullscreen: true
@@ -9,8 +9,8 @@ Ext.define('cv.view.phone.main'
     scrollable: 
         direction: 'vertical',
         directionLock: true
-    constructor: (config)->
-      console.log Date.now() + ' cv.view.phone.main constructor'
-      @superclass.constructor.apply(this, arguments);
+    initialize: ()->
+      console.log Date.now() + ' Cv.view.phone.Main initialize'
+      @callParent()
     
 );

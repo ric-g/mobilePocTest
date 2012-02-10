@@ -1,6 +1,6 @@
 (function() {
 
-  Ext.define('cv.controller.phone.page', {
+  Ext.define('Cv.controller.phone.Page', {
     extend: 'Ext.app.Controller',
     config: {
       id: 'cvControllerPhonePage',
@@ -18,12 +18,15 @@
       }
     },
     redirectPage: function(options) {
+      if (options.id === 'navBackBtn') return;
       console.log(options);
       console.log('Page Controller redirectPage');
       return this.redirectTo('pages/index/' + options.id);
     },
     changePage: function(id) {
+      var mainModel;
       console.log("change page" + id);
+      mainModel = Ext.ModelManager.getModel('Cv.model.Main');
       if (id === 'menu-MarketBuzz') {
         return this.getMain().setItems([
           {
@@ -48,7 +51,8 @@
       }
     },
     init: function() {
-      return console.log('Page Controller init');
+      console.log('Page Controller init');
+      return this.callParent();
     }
   });
 

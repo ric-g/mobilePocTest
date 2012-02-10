@@ -1,17 +1,18 @@
 (function() {
 
-  Ext.define('cv.profile.phone', {
+  Ext.define('Cv.profile.Phone', {
     extend: 'Ext.app.Profile',
     config: {
       name: 'phone',
-      controllers: ['cv.controller.phone.main', 'cv.controller.phone.page']
+      controllers: ['Main', 'Page']
     },
     isActive: function() {
       return Ext.os.is.Desktop || Ext.os.is.Phone;
     },
     launch: function() {
-      console.log(Date.now() + ' cv.profile.Phone launch');
-      return Ext.create('cv.view.phone.main');
+      console.log(Date.now() + ' Cv.profile.Phone launch');
+      this.callParent();
+      return Ext.create('Cv.view.phone.Main');
     }
   });
 

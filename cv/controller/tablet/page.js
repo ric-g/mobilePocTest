@@ -1,6 +1,6 @@
 (function() {
 
-  Ext.define('cv.controller.tablet.page', {
+  Ext.define('Cv.controller.tablet.Page', {
     extend: 'Ext.app.Controller',
     config: {
       id: 'cvControllerTabletPage',
@@ -18,15 +18,18 @@
       }
     },
     redirectPage: function(options) {
+      if (options.id === 'navBackBtn') return;
       console.log(options);
       console.log('Page Controller redirectPage');
       return this.redirectTo('pages/index/' + options.id);
     },
     changePage: function(id) {
+      var mainModel;
+      mainModel = Ext.ModelManager.getModel('Cv.model.Main');
       if (id === 'menu-MarketBuzz') {
-        return this.getMain().setItems([Ext.create('cv.view.tablet.marketBuzz')]);
+        return this.getMain().setItems([Ext.create('Cv.view.tablet.MarketBuzz')]);
       } else if (id === 'menu-Research') {
-        return this.getMain().setItems([Ext.create('cv.view.tablet.research')]);
+        return this.getMain().setItems([Ext.create('Cv.view.tablet.Research')]);
       } else if (id === 'menu-FX') {
         return this.getMain().setItems([
           {
@@ -37,7 +40,8 @@
       }
     },
     init: function() {
-      return console.log('Page Controller init');
+      console.log('Page Controller init');
+      return this.callParent();
     }
   });
 

@@ -1,5 +1,5 @@
 
-Ext.define('cv.view.phone.page'
+Ext.define('Cv.view.phone.Page'
  extend: 'Ext.Panel'
  xtype: 'cvPhoneMainPage'
  config:
@@ -18,5 +18,5 @@ Ext.define('cv.view.phone.page'
   ]
  initialize: ->
   console.log 'page initialize'
-  
+  @callParent()
 )
