@@ -45,13 +45,7 @@
   Ext.onReady(doOnReady);
 
   this.getOrientation = function() {
-    var h, w;
-    w = Ext.Viewport.getSize().width;
-    h = Ext.Viewport.getSize().height;
-    if (typeof w !== 'Number' || typeof h !== 'Number') {
-      return Ext.Viewport.determineOrientation();
-    }
-    if (w > h) return 'landscape';
+    return Ext.Viewport.determineOrientation();
     return 'portrait';
   };
 

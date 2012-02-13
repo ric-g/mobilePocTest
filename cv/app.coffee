@@ -38,10 +38,10 @@ doOnReady = (fn,scope,options) ->
 Ext.onReady(doOnReady)
 
 @getOrientation = ()->
- w = Ext.Viewport.getSize().width
- h = Ext.Viewport.getSize().height
- if typeof w isnt 'Number' or typeof h isnt 'Number'
-  return  Ext.Viewport.determineOrientation()
- if w > h
-  return 'landscape'
+ #w = Ext.Viewport.getSize().width
+ #h = Ext.Viewport.getSize().height
+ #if typeof w isnt 'Number' or typeof h isnt 'Number'
+ return  Ext.Viewport.determineOrientation()
+ #if w > h
+  #return 'landscape'
  return 'portrait'
