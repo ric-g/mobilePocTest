@@ -21,6 +21,17 @@ Ext.define('Cv.view.tablet.MarketBuzz'
    }
   ]
   ###
+  listeners: [
+    {
+      event: 'doOrientationChange'
+      fn: (orientation)->
+       console.log 'page marketBuzz doOrientationChange'
+       console.log orientation
+       @setItems(@getPageItems(orientation));
+      buffer: 500
+      scope: this,
+    }
+  ]
  getLandscapeItems: ()->
   console.log 'marketBuzz getLandscapeItems'
   #if isInitialize is true
@@ -58,9 +69,11 @@ Ext.define('Cv.view.tablet.MarketBuzz'
      if orientation is 'landscape'
          return @getLandscapeItems()
      return @getPortraitItems()
+ ###
  doOrientationChange: (orientation)->
   console.log 'page marketBuzz doOrientationChange'
   @setItems(@getPageItems(orientation));
+ ###
  initialize: ->
   orientation = Ext.Viewport.determineOrientation()
   @setItems(@getPageItems(orientation));

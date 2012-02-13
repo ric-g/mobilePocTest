@@ -27,7 +27,7 @@
       console.log('Orientation Change: ' + orientation + ";" + width + ";" + height);
       cvMarketBuzzpage = Ext.getCmp('cvMarketBuzzPage');
       if (cvMarketBuzzpage) {
-        return cvMarketBuzzpage.doOrientationChange(orientation);
+        return cvMarketBuzzpage.fireEvent('doOrientationChange', orientation);
       }
     }
   });

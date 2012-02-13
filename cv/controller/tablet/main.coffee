@@ -15,11 +15,15 @@ Ext.define('Cv.controller.tablet.Main'
  doBack: (obj)->
      console.log 'click back btn'
      #console.log(@getMain())
-     #mainModel = Ext.ModelManager.getModel('Cv.model.Main');
+     ##mainModel = Ext.ModelManager.getModel('Cv.model.Main');
+     #mainStore = Ext.data.StoreManager.lookup('mainStore');
+     #console.log(mainStore)
      #menuId = mainModel.getMenuId()
      #if menuId is 'menu-MarketBuzz'
      #cvMarketBuzzpage = Ext.getCmp('cvMarketBuzzPage')
+     #cvMarketBuzzpage = Ext.ComponentQuery.query('#cvMarketBuzzPage')
      #console.log(cvMarketBuzzpage)
+     #cvMarketBuzzpage.fireEvent('doOrientationChange','portrait')
      #cvMarketBuzzpage.doOrientationChange('portrait')
  onOrientationChange: (viewport, orientation, width, height)->
   console.log 'Orientation Change: ' + orientation + ";" + width + ";" + height
@@ -27,5 +31,5 @@ Ext.define('Cv.controller.tablet.Main'
   #cvMarketBuzzpage = Ext.getCmp('cvRewpage')
   #cvMarketBuzzpage = Ext.getCmp('cvMarketBuzzpage')
   if cvMarketBuzzpage
-   cvMarketBuzzpage.doOrientationChange(orientation)
+    cvMarketBuzzpage.fireEvent('doOrientationChange',orientation)
 )

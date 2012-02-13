@@ -4,7 +4,7 @@ Ext.define('Cv.profile.Phone'
       name: 'phone'
       controllers: ['Main','Page']
     isActive: ->
-      return Ext.os.is.Desktop || Ext.os.is.Phone;
+      return false#Ext.os.is.Desktop || Ext.os.is.Phone;
     launch: ->
       console.log Date.now() + ' Cv.profile.Phone launch'
       @callParent()

@@ -14,10 +14,26 @@ Ext.application
                 +"; WindowWidth:"+Ext.Viewport.getWindowWidth()
                 +"; WindowHeigh"+Ext.Viewport.getWindowHeight()
                 +"; WindowOuterHeight"+Ext.Viewport.getWindowOuterHeight())
-     Ext.create('Cv.model.Main'
+     ###
+     mainModel = Ext.create('Cv.model.Main'
         userId: 'ba72658'
         menuId: 'main'
      )
+     ###
+     Ext.create('Ext.data.Store'
+      model: 'Cv.model.Main'
+      storeId: 'mainStore'
+     )
+     mainStore = Ext.data.StoreManager.lookup('mainStore');
+     ###
+     mainStore.setData(Ext.create('Cv.model.Main'
+        userId: 'ba72658'
+        menuId: 'main'
+     ))
+     ###
+     #MainModel = Ext.ModelManager.getModel('Cv.model.Main');
+     #console.log new MainModel()
+     #mainModel.set('userId','1')
 
 doOnReady = (fn,scope,options) ->
  console.log Date.now()+' onready'

@@ -8,7 +8,7 @@
       style: "background-color:#ffffff",
       layout: {
         type: "hbox"
-      }
+      },
       /*
         items: [
          {xtype: 'cvPortal',flex: 1,style: "background-color:#eeddee", id: 'cvMarketBuzzpage1',html: "It's marketBuzz portal 1"}
@@ -24,6 +24,18 @@
          }
         ]
       */
+      listeners: [
+        {
+          event: 'doOrientationChange',
+          fn: function(orientation) {
+            console.log('page marketBuzz doOrientationChange');
+            console.log(orientation);
+            return this.setItems(this.getPageItems(orientation));
+          },
+          buffer: 500,
+          scope: this
+        }
+      ]
     },
     getLandscapeItems: function() {
       console.log('marketBuzz getLandscapeItems');
@@ -96,10 +108,11 @@
       if (orientation === 'landscape') return this.getLandscapeItems();
       return this.getPortraitItems();
     },
-    doOrientationChange: function(orientation) {
-      console.log('page marketBuzz doOrientationChange');
-      return this.setItems(this.getPageItems(orientation));
-    },
+    /*
+     doOrientationChange: (orientation)->
+      console.log 'page marketBuzz doOrientationChange'
+      @setItems(@getPageItems(orientation));
+    */
     initialize: function() {
       var orientation;
       orientation = Ext.Viewport.determineOrientation();

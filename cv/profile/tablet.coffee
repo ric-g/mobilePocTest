@@ -4,7 +4,7 @@ Ext.define('Cv.profile.Tablet'
       name: 'tablet'
       controllers: ['Main','Page']
     isActive: ->
-      return Ext.os.is.Tablet
+      return true#Ext.os.is.Tablet
     launch: ->
       console.log Date.now() + ' Cv.profile.Tablet launch'
       @callParent()

@@ -5,6 +5,7 @@ Ext.define('Cv.model.Main'
    {name:'userId', type: 'string'}
    {name:'menuId', type: 'string'}
   ]
+ ###
  changeMenu: (id)->
   @set('menuId', id)
  getMenuId: ->
@@ -13,4 +14,5 @@ Ext.define('Cv.model.Main'
   @set('userId',id)
  getUserId: ->
   return @get('userId')
+ ###
 )

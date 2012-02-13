@@ -12,19 +12,17 @@
           type: 'string'
         }
       ]
-    },
-    changeMenu: function(id) {
-      return this.set('menuId', id);
-    },
-    getMenuId: function() {
-      return this.get('menuId');
-    },
-    setUserId: function(id) {
-      return this.set('userId', id);
-    },
-    getUserId: function() {
-      return this.get('userId');
     }
+    /*
+     changeMenu: (id)->
+      @set('menuId', id)
+     getMenuId: ->
+      return @get('menuId');
+     setUserId: (id)->
+      @set('userId',id)
+     getUserId: ->
+      return @get('userId')
+    */
   });
 
 }).call(this);
