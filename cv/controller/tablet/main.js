@@ -24,8 +24,8 @@
     },
     onOrientationChange: function(viewport, orientation, width, height) {
       var cvMarketBuzzpage, cvResearchPage;
-      console.log('Orientation Change: ' + orientation + ";" + width + ";" + height);
-      alert(Ext.Viewport.determineOrientation() + ";" + orientation);
+      alert('Orientation Change: ' + orientation + ";width:" + width + ";height:" + height);
+      alert(Ext.Viewport.determineOrientation() + ";" + orientation(+"; width:" + Ext.Viewport.getSize().width(+'; height' + Ext.Viewport.getSize().height)));
       cvMarketBuzzpage = Ext.getCmp('cvMarketBuzzPage');
       cvResearchPage = Ext.getCmp('cvResearchPage');
       if (cvMarketBuzzpage) {
