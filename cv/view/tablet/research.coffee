@@ -14,8 +14,8 @@ Ext.define('Cv.view.tablet.Research'
        console.log orientation
        console.log obj
        newPageItems = obj.getPageItems(orientation)
+       ##remove first
        obj.removeAll(false, true);
-       
        obj.setItems(newPageItems);
       buffer: 500
       scope: this,

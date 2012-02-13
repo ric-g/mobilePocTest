@@ -20,12 +20,7 @@
       return Ext.Viewport.on('orientationchange', this.onOrientationChange);
     },
     doBack: function(obj) {
-      var cvResearchPage;
-      console.log('click back btn');
-      cvResearchPage = Ext.getCmp('cvResearchPage');
-      if (cvResearchPage) {
-        return cvResearchPage.fireEvent('doOrientationChange', 'portrait', cvResearchPage);
-      }
+      return console.log('click back btn');
     },
     onOrientationChange: function(viewport, orientation, width, height) {
       var cvMarketBuzzpage, cvResearchPage;
