@@ -9,11 +9,12 @@
         {
           xtype: 'cvTabletNavigation'
         }
-      ],
-      scrollable: {
-        direction: 'vertical',
-        directionLock: true
-      }
+      ]
+      /*
+            scrollable: 
+              direction: 'vertical',
+              directionLock: true
+      */
     },
     initialize: function() {
       console.log(Date.now() + ' Cv.view.tablet.Main initialize');

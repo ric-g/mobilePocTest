@@ -9,7 +9,7 @@
     },
     initialize: function() {
       this.callParent.apply(this, arguments);
-      return console.log('portal initialize');
+      return console.log(this.getId() + ' portal initialize');
     }
   });
 

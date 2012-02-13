@@ -23,13 +23,20 @@ Ext.define('Cv.controller.tablet.Main'
      #cvMarketBuzzpage = Ext.getCmp('cvMarketBuzzPage')
      #cvMarketBuzzpage = Ext.ComponentQuery.query('#cvMarketBuzzPage')
      #console.log(cvMarketBuzzpage)
-     #cvMarketBuzzpage.fireEvent('doOrientationChange','portrait')
+     #if cvMarketBuzzpage
+      #cvMarketBuzzpage.fireEvent('doOrientationChange','portrait', cvMarketBuzzpage)
+     #cvMarketBuzzpage.fireEvent('doOrientationChange','landscape', cvMarketBuzzpage)
      #cvMarketBuzzpage.doOrientationChange('portrait')
+     cvResearchPage = Ext.getCmp('cvResearchPage')
+     if cvResearchPage
+       cvResearchPage.fireEvent('doOrientationChange','portrait', cvResearchPage)
  onOrientationChange: (viewport, orientation, width, height)->
   console.log 'Orientation Change: ' + orientation + ";" + width + ";" + height
   cvMarketBuzzpage = Ext.getCmp('cvMarketBuzzPage')
-  #cvMarketBuzzpage = Ext.getCmp('cvRewpage')
+  cvResearchPage = Ext.getCmp('cvResearchPage')
   #cvMarketBuzzpage = Ext.getCmp('cvMarketBuzzpage')
   if cvMarketBuzzpage
-    cvMarketBuzzpage.fireEvent('doOrientationChange',orientation)
+    cvMarketBuzzpage.fireEvent('doOrientationChange',orientation, cvMarketBuzzpage)
+  if cvResearchPage
+    cvMarketBuzzpage.fireEvent('doOrientationChange',orientation, cvResearchPage)
 )

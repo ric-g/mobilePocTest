@@ -3,6 +3,7 @@ Ext.define('Cv.view.tablet.Navigation'
  xtype: 'cvTabletNavigation'
  config:
   id: 'cvNavigationID'
+  #layout: 'card'
   navigationBar:
    docked: 'top'
    items: [
@@ -31,10 +32,10 @@ Ext.define('Cv.view.tablet.Menu'
  xtype: 'cvTabletMenu'
  config:
   id: 'cvMenu'
-  #layout: 'fix'
-  scroll: 'horizontal'
+  #layout: 'fit'
+  scrollable: 'horizontal'
   cls: 'testbutton'
-  #height: 40
+  #height: 50
   ###
   items: [
     id: 'menuBarButtons'

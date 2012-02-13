@@ -6,7 +6,7 @@
     config: {
       width: "100%",
       height: "768px",
-      style: "background-color:#ffee00",
+      style: "background-color:#ffffff",
       layout: {
         type: 'hbox'
       },

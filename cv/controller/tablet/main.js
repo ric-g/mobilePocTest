@@ -20,14 +20,23 @@
       return Ext.Viewport.on('orientationchange', this.onOrientationChange);
     },
     doBack: function(obj) {
-      return console.log('click back btn');
+      var cvResearchPage;
+      console.log('click back btn');
+      cvResearchPage = Ext.getCmp('cvResearchPage');
+      if (cvResearchPage) {
+        return cvResearchPage.fireEvent('doOrientationChange', 'portrait', cvResearchPage);
+      }
     },
     onOrientationChange: function(viewport, orientation, width, height) {
-      var cvMarketBuzzpage;
+      var cvMarketBuzzpage, cvResearchPage;
       console.log('Orientation Change: ' + orientation + ";" + width + ";" + height);
       cvMarketBuzzpage = Ext.getCmp('cvMarketBuzzPage');
+      cvResearchPage = Ext.getCmp('cvResearchPage');
       if (cvMarketBuzzpage) {
-        return cvMarketBuzzpage.fireEvent('doOrientationChange', orientation);
+        cvMarketBuzzpage.fireEvent('doOrientationChange', orientation, cvMarketBuzzpage);
+      }
+      if (cvResearchPage) {
+        return cvMarketBuzzpage.fireEvent('doOrientationChange', orientation, cvResearchPage);
       }
     }
   });

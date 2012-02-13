@@ -31,7 +31,7 @@ Ext.define('Cv.view.phone.Menu'
  config:
   id: 'cvMenu'
   #layout: 'fix'
-  scroll: 'horizontal'
+  scrollable: 'horizontal'
   cls: 'testbutton'
   #height: 40
   ###

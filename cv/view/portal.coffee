@@ -6,5 +6,5 @@ Ext.define('Cv.view.Portal'
   html: 'portal html'
  initialize: ->
   @callParent.apply(this,arguments)
-  console.log 'portal initialize'
+  console.log @getId() + ' portal initialize'
 )

@@ -40,7 +40,7 @@
     xtype: 'cvTabletMenu',
     config: {
       id: 'cvMenu',
-      scroll: 'horizontal',
+      scrollable: 'horizontal',
       cls: 'testbutton'
       /*
         items: [
