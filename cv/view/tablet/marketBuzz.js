@@ -27,15 +27,12 @@
       listeners: [
         {
           event: 'doOrientationChange',
-          fn: function(orientation, obj) {
-            var newPageItems;
+          fn: function(obj) {
+            var newPageItems, orientation;
             console.log('page marketBuzz doOrientationChange');
             console.log(obj);
-            console.log(orientation);
-            alert(orientation);
             orientation = Ext.Viewport.determineOrientation();
             console.log(orientation);
-            alert(orientation);
             newPageItems = obj.getPageItems(orientation);
             obj.removeAll(false, true);
             return obj.setItems(newPageItems);

@@ -12,11 +12,10 @@
       listeners: [
         {
           event: 'doOrientationChange',
-          fn: function(orientation, obj) {
-            var newPageItems;
+          fn: function(obj) {
+            var newPageItems, orientation;
             console.log('page research doOrientationChange');
             console.log(obj);
-            console.log(orientation);
             orientation = Ext.Viewport.determineOrientation();
             console.log(orientation);
             newPageItems = obj.getPageItems(orientation);

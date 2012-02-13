@@ -9,10 +9,9 @@ Ext.define('Cv.view.tablet.Research'
   listeners: [
     {
       event: 'doOrientationChange'
-      fn: (orientation, obj)->
+      fn: (obj)->
        console.log 'page research doOrientationChange'
        console.log obj
-       console.log orientation
        orientation = Ext.Viewport.determineOrientation()
        console.log orientation
        newPageItems = obj.getPageItems(orientation)
