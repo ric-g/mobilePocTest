@@ -27,10 +27,10 @@ Ext.define('Cv.view.tablet.MarketBuzz'
       fn: (orientation, obj)->
        console.log 'page marketBuzz doOrientationChange'
        console.log orientation
+       alert orientation
        console.log obj
        newPageItems = obj.getPageItems(orientation)
        obj.removeAll(false, true);
-       
        obj.setItems(newPageItems);
       buffer: 500
       scope: this,
@@ -97,6 +97,7 @@ Ext.define('Cv.view.tablet.MarketBuzz'
   
  getPageItems: (orientation)->
   console.log 'marketBuzz getItems'
+  alert orientation + "  getPageItems"
   if orientation is 'landscape'
    return @getLandscapeItems()
   return @getPortraitItems()

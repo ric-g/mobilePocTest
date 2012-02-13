@@ -32,6 +32,7 @@ Ext.define('Cv.controller.tablet.Main'
        #cvResearchPage.fireEvent('doOrientationChange','portrait', cvResearchPage)
  onOrientationChange: (viewport, orientation, width, height)->
   console.log 'Orientation Change: ' + orientation + ";" + width + ";" + height
+  alert 'Orientation Change: ' + orientation + ";" + width + ";" + height;
   cvMarketBuzzpage = Ext.getCmp('cvMarketBuzzPage')
   cvResearchPage = Ext.getCmp('cvResearchPage')
   #cvMarketBuzzpage = Ext.getCmp('cvMarketBuzzpage')

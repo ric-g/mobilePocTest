@@ -25,6 +25,7 @@
     onOrientationChange: function(viewport, orientation, width, height) {
       var cvMarketBuzzpage, cvResearchPage;
       console.log('Orientation Change: ' + orientation + ";" + width + ";" + height);
+      alert('Orientation Change: ' + orientation + ";" + width + ";" + height);
       cvMarketBuzzpage = Ext.getCmp('cvMarketBuzzPage');
       cvResearchPage = Ext.getCmp('cvResearchPage');
       if (cvMarketBuzzpage) {

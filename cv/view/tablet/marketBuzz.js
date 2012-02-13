@@ -31,6 +31,7 @@
             var newPageItems;
             console.log('page marketBuzz doOrientationChange');
             console.log(orientation);
+            alert(orientation);
             console.log(obj);
             newPageItems = obj.getPageItems(orientation);
             obj.removeAll(false, true);
@@ -133,6 +134,7 @@
     },
     getPageItems: function(orientation) {
       console.log('marketBuzz getItems');
+      alert(orientation + "  getPageItems");
       if (orientation === 'landscape') return this.getLandscapeItems();
       return this.getPortraitItems();
     },

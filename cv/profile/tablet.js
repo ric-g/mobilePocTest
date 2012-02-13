@@ -7,7 +7,7 @@
       controllers: ['Main', 'Page']
     },
     isActive: function() {
-      return Ext.os.is.Desktop || Ext.os.is.Tablet;
+      return true;
     },
     launch: function() {
       console.log(Date.now() + ' Cv.profile.Tablet launch');
