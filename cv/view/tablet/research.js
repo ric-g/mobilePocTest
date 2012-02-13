@@ -185,7 +185,7 @@
     },
     initialize: function() {
       var orientation;
-      orientation = Ext.Viewport.determineOrientation();
+      orientation = getOrientation();
       this.setItems(this.getPageItems(orientation));
       this.callParent.apply(this, arguments);
       return console.log('page research initialize');

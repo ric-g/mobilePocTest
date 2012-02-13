@@ -11,7 +11,7 @@ Ext.application
     launch: ->
      console.log Date.now()+' application launch ' +Ext.os.deviceType
      console.log "DetermineOrientation:"+Ext.Viewport.determineOrientation()+"; WindowWidth:"+Ext.Viewport.getWindowWidth()+"; WindowHeigh:"+Ext.Viewport.getWindowHeight()+"; WindowOuterHeight:"+Ext.Viewport.getWindowOuterHeight()
-     alert Ext.Viewport.determineOrientation()+"; width:"+Ext.Viewport.getSize().width+'; height'+Ext.Viewport.getSize().height
+     console.log Ext.Viewport.determineOrientation()+"; width:"+Ext.Viewport.getSize().width+'; height'+Ext.Viewport.getSize().height
      ###
      mainModel = Ext.create('Cv.model.Main'
         userId: 'ba72658'
@@ -36,3 +36,12 @@ Ext.application
 doOnReady = (fn,scope,options) ->
  console.log Date.now()+' onready'
 Ext.onReady(doOnReady)
+
+@getOrientation = ()->
+ w = Ext.Viewport.getSize().width
+ h = Ext.Viewport.getSize().height
+ if typeof w isnt 'Number' or typeof h isnt 'Number'
+  return  Ext.Viewport.determineOrientation()
+ if w > h
+  return 'landscape'
+ return 'portrait'

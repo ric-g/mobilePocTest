@@ -24,10 +24,10 @@
     },
     onOrientationChange: function(viewport, orientation, width, height) {
       var cvMarketBuzzpage, cvResearchPage, h, w;
-      alert('Orientation Change: ' + orientation + ";width:" + width + ";height:" + height);
+      console.log('Orientation Change: ' + orientation + ";width:" + width + ";height:" + height);
       w = Ext.Viewport.getSize().width;
       h = Ext.Viewport.getSize().height;
-      alert(Ext.Viewport.determineOrientation() + "; width:" + w + '; height' + h);
+      console(Ext.Viewport.determineOrientation() + "; width:" + w + '; height' + h);
       cvMarketBuzzpage = Ext.getCmp('cvMarketBuzzPage');
       cvResearchPage = Ext.getCmp('cvResearchPage');
       if (cvMarketBuzzpage) {

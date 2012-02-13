@@ -138,7 +138,8 @@ Ext.define('Cv.view.tablet.Research'
    return @getLandscapeItems()
   return @getPortraitItems()
  initialize: ->
-  orientation = Ext.Viewport.determineOrientation()
+  #orientation = Ext.Viewport.determineOrientation()
+  orientation = getOrientation()
   @setItems(@getPageItems(orientation));
   @callParent.apply(this,arguments)
   console.log 'page research initialize'

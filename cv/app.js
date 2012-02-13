@@ -17,7 +17,7 @@
       var mainStore;
       console.log(Date.now() + ' application launch ' + Ext.os.deviceType);
       console.log("DetermineOrientation:" + Ext.Viewport.determineOrientation() + "; WindowWidth:" + Ext.Viewport.getWindowWidth() + "; WindowHeigh:" + Ext.Viewport.getWindowHeight() + "; WindowOuterHeight:" + Ext.Viewport.getWindowOuterHeight());
-      alert(Ext.Viewport.determineOrientation() + "; width:" + Ext.Viewport.getSize().width + '; height' + Ext.Viewport.getSize().height);
+      console.log(Ext.Viewport.determineOrientation() + "; width:" + Ext.Viewport.getSize().width + '; height' + Ext.Viewport.getSize().height);
       /*
            mainModel = Ext.create('Cv.model.Main'
               userId: 'ba72658'
@@ -43,5 +43,16 @@
   };
 
   Ext.onReady(doOnReady);
+
+  this.getOrientation = function() {
+    var h, w;
+    w = Ext.Viewport.getSize().width;
+    h = Ext.Viewport.getSize().height;
+    if (typeof w !== 'Number' || typeof h !== 'Number') {
+      return Ext.Viewport.determineOrientation();
+    }
+    if (w > h) return 'landscape';
+    return 'portrait';
+  };
 
 }).call(this);

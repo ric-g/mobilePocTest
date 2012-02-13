@@ -106,7 +106,8 @@ Ext.define('Cv.view.tablet.MarketBuzz'
   @setItems(@getPageItems(orientation));
  ###
  initialize: ->
-  orientation = Ext.Viewport.determineOrientation()
+  #orientation = Ext.Viewport.determineOrientation()
+  orientation = getOrientation()
   @setItems(@getPageItems(orientation));
   #@callParent.apply(this,arguments)
   @callParent()

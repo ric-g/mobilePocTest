@@ -144,7 +144,7 @@
     */
     initialize: function() {
       var orientation;
-      orientation = Ext.Viewport.determineOrientation();
+      orientation = getOrientation();
       this.setItems(this.getPageItems(orientation));
       this.callParent();
       return console.log('page marketBuzz initialize');
