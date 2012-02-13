@@ -97,7 +97,6 @@ Ext.define('Cv.view.tablet.MarketBuzz'
   
  getPageItems: (orientation)->
   console.log 'marketBuzz getItems'
-  alert orientation + "  getPageItems"
   if orientation is 'landscape'
    return @getLandscapeItems()
   return @getPortraitItems()

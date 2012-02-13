@@ -134,7 +134,6 @@
     },
     getPageItems: function(orientation) {
       console.log('marketBuzz getItems');
-      alert(orientation + "  getPageItems");
       if (orientation === 'landscape') return this.getLandscapeItems();
       return this.getPortraitItems();
     },
