@@ -30,9 +30,12 @@
           fn: function(orientation, obj) {
             var newPageItems;
             console.log('page marketBuzz doOrientationChange');
+            console.log(obj);
             console.log(orientation);
             alert(orientation);
-            console.log(obj);
+            orientation = Ext.Viewport.determineOrientation();
+            console.log(orientation);
+            alert(orientation);
             newPageItems = obj.getPageItems(orientation);
             obj.removeAll(false, true);
             return obj.setItems(newPageItems);

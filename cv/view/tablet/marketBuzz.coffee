@@ -26,9 +26,12 @@ Ext.define('Cv.view.tablet.MarketBuzz'
       event: 'doOrientationChange'
       fn: (orientation, obj)->
        console.log 'page marketBuzz doOrientationChange'
+       console.log obj
        console.log orientation
        alert orientation
-       console.log obj
+       orientation = Ext.Viewport.determineOrientation()
+       console.log orientation
+       alert orientation
        newPageItems = obj.getPageItems(orientation)
        obj.removeAll(false, true);
        obj.setItems(newPageItems);

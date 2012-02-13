@@ -11,8 +11,10 @@ Ext.define('Cv.view.tablet.Research'
       event: 'doOrientationChange'
       fn: (orientation, obj)->
        console.log 'page research doOrientationChange'
-       console.log orientation
        console.log obj
+       console.log orientation
+       orientation = Ext.Viewport.determineOrientation()
+       console.log orientation
        newPageItems = obj.getPageItems(orientation)
        ##remove first
        obj.removeAll(false, true);

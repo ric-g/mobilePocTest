@@ -15,8 +15,10 @@
           fn: function(orientation, obj) {
             var newPageItems;
             console.log('page research doOrientationChange');
-            console.log(orientation);
             console.log(obj);
+            console.log(orientation);
+            orientation = Ext.Viewport.determineOrientation();
+            console.log(orientation);
             newPageItems = obj.getPageItems(orientation);
             obj.removeAll(false, true);
             return obj.setItems(newPageItems);
