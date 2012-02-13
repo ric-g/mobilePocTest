@@ -10,8 +10,8 @@ Ext.application
     profiles: ['Tablet', 'Phone']
     launch: ->
      console.log Date.now()+' application launch ' +Ext.os.deviceType
-     console.log "DetermineOrientation:"+Ext.Viewport.determineOrientation()+"; WindowWidth:"+Ext.Viewport.getWindowWidth()+"; WindowHeigh:"+Ext.Viewport.getWindowHeight()+"; WindowOuterHeight:"+Ext.Viewport.getWindowOuterHeight()+"; width:"+Ext.Viewport.getSize().width +'; height'+Ext.Viewport.getSize().height
-     alert Ext.Viewport.determineOrientation() + "; width:"+Ext.Viewport.getSize().width +'; height'+Ext.Viewport.getSize().height
+     console.log "DetermineOrientation:"+Ext.Viewport.determineOrientation()+"; WindowWidth:"+Ext.Viewport.getWindowWidth()+"; WindowHeigh:"+Ext.Viewport.getWindowHeight()+"; WindowOuterHeight:"+Ext.Viewport.getWindowOuterHeight()
+     alert Ext.Viewport.determineOrientation()+"; width:"+Ext.Viewport.getSize().width+'; height'+Ext.Viewport.getSize().height
      ###
      mainModel = Ext.create('Cv.model.Main'
         userId: 'ba72658'

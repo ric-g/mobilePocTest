@@ -34,7 +34,7 @@ Ext.define('Cv.controller.tablet.Main'
   alert 'Orientation Change: ' + orientation + ";width:" + width + ";height:" + height
   w = Ext.Viewport.getSize().width
   h = Ext.Viewport.getSize().height
-  alert Ext.Viewport.determineOrientation() + "; width:" + w +'; height'+ h
+  alert Ext.Viewport.determineOrientation()+"; width:"+w+'; height'+h
   cvMarketBuzzpage = Ext.getCmp('cvMarketBuzzPage')
   cvResearchPage = Ext.getCmp('cvResearchPage')
   #cvMarketBuzzpage = Ext.getCmp('cvMarketBuzzpage')
