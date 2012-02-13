@@ -16,7 +16,7 @@
     launch: function() {
       var mainStore;
       console.log(Date.now() + ' application launch ' + Ext.os.deviceType);
-      console.log("DetermineOrientation:" + Ext.Viewport.determineOrientation(), +"; WindowWidth:" + Ext.Viewport.getWindowWidth(), +"; WindowHeigh" + Ext.Viewport.getWindowHeight(), +"; WindowOuterHeight" + Ext.Viewport.getWindowOuterHeight());
+      alert("DetermineOrientation:" + Ext.Viewport.determineOrientation(), +"; WindowWidth:" + Ext.Viewport.getWindowWidth(), +"; WindowHeigh" + Ext.Viewport.getWindowHeight(), +"; WindowOuterHeight" + Ext.Viewport.getWindowOuterHeight());
       /*
            mainModel = Ext.create('Cv.model.Main'
               userId: 'ba72658'

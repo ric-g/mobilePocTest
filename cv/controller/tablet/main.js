@@ -25,13 +25,14 @@
     onOrientationChange: function(viewport, orientation, width, height) {
       var cvMarketBuzzpage, cvResearchPage;
       console.log('Orientation Change: ' + orientation + ";" + width + ";" + height);
+      alert(Ext.Viewport.determineOrientation() + ";" + orientation);
       cvMarketBuzzpage = Ext.getCmp('cvMarketBuzzPage');
       cvResearchPage = Ext.getCmp('cvResearchPage');
       if (cvMarketBuzzpage) {
         cvMarketBuzzpage.fireEvent('doOrientationChange', cvMarketBuzzpage);
       }
       if (cvResearchPage) {
-        return cvMarketBuzzpage.fireEvent('doOrientationChange', cvResearchPage);
+        return cvResearchPage.fireEvent('doOrientationChange', cvResearchPage);
       }
     }
   });

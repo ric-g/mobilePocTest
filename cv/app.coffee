@@ -10,7 +10,7 @@ Ext.application
     profiles: ['Tablet', 'Phone']
     launch: ->
      console.log Date.now()+' application launch ' +Ext.os.deviceType
-     console.log("DetermineOrientation:"+Ext.Viewport.determineOrientation()
+     alert("DetermineOrientation:"+Ext.Viewport.determineOrientation()
                 +"; WindowWidth:"+Ext.Viewport.getWindowWidth()
                 +"; WindowHeigh"+Ext.Viewport.getWindowHeight()
                 +"; WindowOuterHeight"+Ext.Viewport.getWindowOuterHeight())
