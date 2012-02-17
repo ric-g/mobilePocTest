@@ -8,6 +8,6 @@ Ext.define('Cv.profile.Tablet'
     launch: ->
       console.log Date.now() + ' Cv.profile.Tablet launch'
       @callParent()
-      Ext.create('Cv.view.tablet.Main');
+      Ext.Viewport.add(Ext.create('Cv.view.tablet.Main'))
     
 )

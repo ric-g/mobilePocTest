@@ -12,7 +12,7 @@
     launch: function() {
       console.log(Date.now() + ' Cv.profile.Tablet launch');
       this.callParent();
-      return Ext.create('Cv.view.tablet.Main');
+      return Ext.Viewport.add(Ext.create('Cv.view.tablet.Main'));
     }
   });
 
