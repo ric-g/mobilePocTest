@@ -11,7 +11,8 @@ Ext.define('Cv.controller.tablet.Main'
  init: ->
   console.log 'Main Tablet Controller init'
   @callParent()
-  #Ext.Viewport.on('orientationchange',@onOrientationChange)
+  Ext.Viewport.on('orientationchange',@onOrientationChange)
+  #Ext.Viewport.on('resize',@resize)
  doBack: (obj)->
      console.log 'click back btn'
      #console.log(@getMain())
@@ -30,6 +31,9 @@ Ext.define('Cv.controller.tablet.Main'
      #cvResearchPage = Ext.getCmp('cvResearchPage')
      #if cvResearchPage
        #cvResearchPage.fireEvent('doOrientationChange','portrait', cvResearchPage)
+ resize: ( viewport, width, height, eOpts )->
+   console.log width+";"+height
+   console.log eOpts
  onOrientationChange: (viewport, orientation, width, height)->
   console.log 'Orientation Change: ' + orientation + ";width:" + width + ";height:" + height
   w = Ext.Viewport.getSize().width

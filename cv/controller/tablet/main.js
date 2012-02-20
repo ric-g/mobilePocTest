@@ -16,10 +16,15 @@
     },
     init: function() {
       console.log('Main Tablet Controller init');
-      return this.callParent();
+      this.callParent();
+      return Ext.Viewport.on('orientationchange', this.onOrientationChange);
     },
     doBack: function(obj) {
       return console.log('click back btn');
+    },
+    resize: function(viewport, width, height, eOpts) {
+      console.log(width + ";" + height);
+      return console.log(eOpts);
     },
     onOrientationChange: function(viewport, orientation, width, height) {
       var cvMarketBuzzpage, cvResearchPage, h, w;

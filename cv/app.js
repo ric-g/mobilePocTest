@@ -14,25 +14,26 @@
     },
     profiles: ['Tablet', 'Phone'],
     launch: function() {
-      var mainStore, nativeAppOrientation;
+      var mainStore;
       console.log(Date.now() + ' application launch ' + Ext.os.deviceType);
       console.log("DetermineOrientation:" + Ext.Viewport.determineOrientation() + "; WindowWidth:" + Ext.Viewport.getWindowWidth() + "; WindowHeigh:" + Ext.Viewport.getWindowHeight() + "; WindowOuterHeight:" + Ext.Viewport.getWindowOuterHeight());
       console.log(Ext.Viewport.determineOrientation() + "; width:" + Ext.Viewport.getSize().width + '; height' + Ext.Viewport.getSize().height);
-      nativeAppOrientation = Ext.Viewport.determineOrientation();
-      document.body.style.overflow = 'hidden';
-      document.getElementsByTagName('html')[0].style.overflow = 'hidden';
-      Ext.EventManager.onWindowResize(function() {
-        var e;
-        alert(nativeAppOrientation + ";" + Ext.Viewport.determineOrientation());
-        if (nativeAppOrientation !== Ext.Viewport.determineOrientation()) {
-          e = document.createEvent('Events');
-          e.initEvent('orientationchange', true, false);
-          document.dispatchEvent(e);
-          return nativeAppOrientation = Ext.Viewport.determineOrientation();
-        }
-      }, this, {
-        buffer: 500
-      });
+      alert(Ext.feature.has.Orientation + ';' + window.orientation);
+      /*
+           nativeAppOrientation = Ext.Viewport.determineOrientation();
+           document.body.style.overflow='hidden';
+           document.getElementsByTagName('html')[0].style.overflow='hidden';
+           Ext.EventManager.onWindowResize( ->
+            alert(nativeAppOrientation + ";"+Ext.Viewport.determineOrientation())
+            if nativeAppOrientation isnt Ext.Viewport.determineOrientation()
+             e = document.createEvent('Events');
+             e.initEvent('orientationchange', true, false);
+             document.dispatchEvent(e);
+             nativeAppOrientation = Ext.Viewport.determineOrientation();
+           this
+           {buffer: 500}
+           )
+      */
       /*
            mainModel = Ext.create('Cv.model.Main'
               userId: 'ba72658'

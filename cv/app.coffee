@@ -12,6 +12,8 @@ Ext.application
      console.log Date.now()+' application launch ' +Ext.os.deviceType
      console.log "DetermineOrientation:"+Ext.Viewport.determineOrientation()+"; WindowWidth:"+Ext.Viewport.getWindowWidth()+"; WindowHeigh:"+Ext.Viewport.getWindowHeight()+"; WindowOuterHeight:"+Ext.Viewport.getWindowOuterHeight()
      console.log Ext.Viewport.determineOrientation()+"; width:"+Ext.Viewport.getSize().width+'; height'+Ext.Viewport.getSize().height
+     alert(Ext.feature.has.Orientation+';'+window.orientation)
+     ###
      nativeAppOrientation = Ext.Viewport.determineOrientation();
      document.body.style.overflow='hidden';
      document.getElementsByTagName('html')[0].style.overflow='hidden';
@@ -25,7 +27,7 @@ Ext.application
      this
      {buffer: 500}
      )
-        
+        ###
      ###
      mainModel = Ext.create('Cv.model.Main'
         userId: 'ba72658'
