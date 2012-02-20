@@ -11,7 +11,7 @@ Ext.define('Cv.controller.tablet.Main'
  init: ->
   console.log 'Main Tablet Controller init'
   @callParent()
-  Ext.Viewport.on('orientationchange',@onOrientationChange)
+  #Ext.Viewport.on('orientationchange',@onOrientationChange)
  doBack: (obj)->
      console.log 'click back btn'
      #console.log(@getMain())

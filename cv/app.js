@@ -14,10 +14,25 @@
     },
     profiles: ['Tablet', 'Phone'],
     launch: function() {
-      var mainStore;
+      var mainStore, nativeAppOrientation;
       console.log(Date.now() + ' application launch ' + Ext.os.deviceType);
       console.log("DetermineOrientation:" + Ext.Viewport.determineOrientation() + "; WindowWidth:" + Ext.Viewport.getWindowWidth() + "; WindowHeigh:" + Ext.Viewport.getWindowHeight() + "; WindowOuterHeight:" + Ext.Viewport.getWindowOuterHeight());
       console.log(Ext.Viewport.determineOrientation() + "; width:" + Ext.Viewport.getSize().width + '; height' + Ext.Viewport.getSize().height);
+      nativeAppOrientation = Ext.Viewport.determineOrientation();
+      document.body.style.overflow = 'hidden';
+      document.getElementsByTagName('html')[0].style.overflow = 'hidden';
+      Ext.EventManager.onWindowResize(function() {
+        var e;
+        alert(nativeAppOrientation + ";" + Ext.Viewport.determineOrientation());
+        if (nativeAppOrientation !== Ext.Viewport.determineOrientation()) {
+          e = document.createEvent('Events');
+          e.initEvent('orientationchange', true, false);
+          document.dispatchEvent(e);
+          return nativeAppOrientation = Ext.Viewport.determineOrientation();
+        }
+      }, this, {
+        buffer: 500
+      });
       /*
            mainModel = Ext.create('Cv.model.Main'
               userId: 'ba72658'

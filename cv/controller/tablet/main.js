@@ -16,8 +16,7 @@
     },
     init: function() {
       console.log('Main Tablet Controller init');
-      this.callParent();
-      return Ext.Viewport.on('orientationchange', this.onOrientationChange);
+      return this.callParent();
     },
     doBack: function(obj) {
       return console.log('click back btn');

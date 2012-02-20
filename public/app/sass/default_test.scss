@@ -1,0 +1,29 @@
+$base-color: #000;
+//$base-gradient: 'glossy';
+//$base-gradient: 'matte';
+$base-gradient: 'bevel';
+//$base-gradient: 'recessed';
+//$base-gradient: 'flat';
+
+//$tabs-bar-gradient: 'bevel'
+
+
+
+@import 'sencha-touch/default/all';
+
+@include sencha-panel;
+@include sencha-buttons;
+@include sencha-sheet;
+@include sencha-picker;
+@include sencha-tabs;
+@include sencha-toolbar;
+@include sencha-toolbar-forms;
+@include sencha-carousel;
+@include sencha-indexbar;
+@include sencha-list;
+@include sencha-list-paging;
+@include sencha-list-pullrefresh;
+@include sencha-layout;
+@include sencha-form;
+@include sencha-msgbox;
+@include sencha-loading-spinner;
